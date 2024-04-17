@@ -8,7 +8,7 @@
       "FrontendFields": [
         {
           "name": "Current Secure Score",
-          "value": "CurrentSecureScore.currentScore"
+          "value": "CurrentSecureScore.currentScore / CurrentSecureScore.maxScore * 100"
         }
       ],
       "StoreAs": "JSON",
