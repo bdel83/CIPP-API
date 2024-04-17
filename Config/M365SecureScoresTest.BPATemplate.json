@@ -1,6 +1,6 @@
 {
   "name": "M365 Secure Scores Test",
-  "style": "Tenant",
+  "style": "Table",
   "Fields": [
     {
       "name": "CurrentSecureScore",
