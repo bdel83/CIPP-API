@@ -18,7 +18,7 @@
       "parameters": {
         "asApp": false
       },
-      "URL": "https://graph.microsoft.com/beta/security/secureScores"
+      "URL": "https://graph.microsoft.com/v1.0/security/secureScores"
     }
   ]
 }
