@@ -8,7 +8,7 @@
       "FrontendFields": [
         {
           "name": "Current Secure Score",
-          "value": "CurrentSecureScore.currentScore / CurrentSecureScore.maxScore * 100"
+          "value": "currentScore / maxScore * 100"
         }
       ],
       "StoreAs": "JSON",
@@ -18,7 +18,7 @@
       "parameters": {
         "asApp": false
       },
-      "URL": "https://graph.microsoft.com/beta/security/secureScores?$top=1"
+      "URL": "https://graph.microsoft.com/beta/security/secureScores"
     }
   ]
 }
