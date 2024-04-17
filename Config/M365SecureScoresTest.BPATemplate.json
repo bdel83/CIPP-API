@@ -8,10 +8,13 @@
       "FrontendFields": [
         {
           "name": "Current Secure Score",
-          "value": "CurrentSecureScore"
+          "value": "CurrentSecureScore.currentScore"
         }
       ],
       "StoreAs": "JSON",
+      "ExtractFields": [
+        "currentScore"
+      ],
       "URL": "https://graph.microsoft.com/beta/security/secureScores?$top=1"
     }
   ]
