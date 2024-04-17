@@ -15,6 +15,9 @@
       "ExtractFields": [
         "currentScore"
       ],
+      "parameters": {
+        "asApp": true
+      },
       "URL": "https://graph.microsoft.com/beta/security/secureScores?$top=1"
     }
   ]
