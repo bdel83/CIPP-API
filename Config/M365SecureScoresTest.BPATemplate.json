@@ -1,25 +1,41 @@
 {
-  "name": "M365 Secure Scores Test",
-  "style": "Tenant",
+  "style": "Table",
   "Fields": [
-  {
-      "name": "CurrentSecureScore",
-      "UseExistingInfo": true,
-      "StoreAs": "JSON",
+    {
+      "UseExistingInfo": false,
       "FrontendFields": [
         {
           "name": "Current Secure Score",
-          "value": "CurrentSecureScore.currentScore",
-          "desc": "The current Secure Score for this tenant. This is the sum of all the individual controls that have been implemented.",
-          "formatter": "number"
+          "value": "CurrentSecureScore.currentScore / CurrentSecureScore.maxScore * 100",
+          "formatter": "math",
+          "showAs": "percentage"
         },
         {
-          "name": "Max Secure Score",
-          "value": "CurrentSecureScore.maxScore",
-          "desc": "The maximum Secure Score for this tenant. This is the sum of all the individual controls that can be implemented.",
-          "formatter": "number"
+          "name": "Average Comparative Score (All Tenants)",
+          "value": "CurrentSecureScore.averageComparativeScores[0].averageScore / CurrentSecureScore.maxScore * 100",
+          "formatter": "math",
+          "showAs": "percentage"
+        },
+        {
+          "name": "Average Comparative Score (Similiar Size Tenants)",
+          "value": "CurrentSecureScore.averageComparativeScores[1].averageScore / CurrentSecureScore.maxScore * 100",
+          "formatter": "math",
+          "showAs": "percentage"
         }
-      ]
+      ],
+      "name": "CurrentSecureScore",
+      "API": "Graph",
+      "URL": "https://graph.microsoft.com/beta/security/secureScores?$top=1",
+      "Parameters": {
+        "Nopagination": true
+      },
+      "ExtractFields": [
+        "currentScore",
+        "maxScore",
+        "averageComparativeScores"
+      ],
+      "StoreAs": "JSON"
     }
-  ]
+  ],
+  "name": "M365 Secure Scores Test"
 }
