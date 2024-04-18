@@ -4,22 +4,14 @@
   "Fields": [
     {
       "name": "CurrentSecureScore",
-      "UseExistingInfo": false,
+      "UseExistingInfo": true,
       "FrontendFields": [
         {
           "name": "Current Secure Score",
-          "value": "CurrentSecureScore.currentScore / CurrentSecureScore.maxScore * 100"
+          "value": "CurrentSecureScore.currentScore / CurrentSecureScore.maxScore * 100",
+          "formatter": "number"
         }
-      ],
-      "StoreAs": "JSON",
-      "API": "Graph",
-      "ExtractFields": [
-        "currentScore",
-        "maxScore"
-      ],
-      "parameters": {
-        "asApp": false
-      }
+      ]
     }
   ]
 }
