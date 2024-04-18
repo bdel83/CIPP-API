@@ -12,13 +12,14 @@
         }
       ],
       "StoreAs": "JSON",
+      "API": "Graph",
       "ExtractFields": [
-        "currentScore"
+        "currentScore",
+        "maxScore"
       ],
       "parameters": {
         "asApp": false
-      },
-      "URL": "https://graph.microsoft.com/v1.0/security/secureScores"
+      }
     }
   ]
 }
